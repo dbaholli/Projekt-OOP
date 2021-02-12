@@ -2,6 +2,25 @@
 include_once('function.php');
 
 $userdata=new DB_con();
+if(isset($_POST['submit']))
+  {
+      $fname=$_POST['fullname'];
+      $uname=$_POST['username'];
+      $uemail=$_POST['email'];
+      $pasword=md5($_POST['password']);
+      $sql=$userdata->registration($fname,$uname,$uemail,$pasword);
+
+    if($sql)
+    {
+      echo "<script>alert('Jeni regjistruar ne databaze me sukses.');</script>";
+      echo "<script>window.location.href='signin.php'</script>";
+    }
+    else
+    {
+      echo "<script>alert('Nuk jeni regjistruar. Provo prap me te dhenat korrekte!');</script>";
+      echo "<script>window.location.href='signin.php'</script>";
+    }
+  }
 ?>
 
 <!DOCTYPE html>
