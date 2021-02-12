@@ -22,3 +22,21 @@ class DB_con
 	return $result;
 
 	}
+
+	// Register funksionii  dd
+	public function registration($fname,$uname,$uemail,$pasword)
+	{
+	$ret=mysqli_query($this->dbh,"insert into tblusers(FullName,Username,UserEmail,Password) values('$fname','$uname','$uemail','$pasword')");
+	return $ret;
+	}
+
+// Per signin
+public function signin($uname,$pasword)
+	{
+	$result=mysqli_query($this->dbh,"select id,FullName from tblusers where Username='$uname' and Password='$pasword'");
+	return $result;
+	}
+
+
+}
+?>
