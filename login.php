@@ -54,6 +54,7 @@ include_once('function.php');
       </div>
     </div>
     
+
     <br>
     <div class="control-group">
       <div class="controls">
@@ -61,6 +62,11 @@ include_once('function.php');
       </div>
     </div>
 
+    <div class="control-group">
+      <div class="controls">
+        <!-- Sjeni regjistruar? --> Not registered?  <a href="register.php">Register Here</a> 
+      </div>
+    </div>
 
     </fieldset>
 </form>
