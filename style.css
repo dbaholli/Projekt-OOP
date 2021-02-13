@@ -422,21 +422,6 @@ p {
     margin: 10px;
 }
 
-/*Shfaqja e webfaqes ne telefon*/
-@media(max-width: 768px){
-    header #branding,
-    header nav,
-    header nav li
-    #newsletter h1,
-    #newsletter form
-    #boxes .box,
-    article#main-col,
-    aside#sidebar{
-        float: none;
-        text-align: center;
-        width: 100%;
-    }
-
     header{
         padding-bottom: 20px;
     }
@@ -454,4 +439,22 @@ p {
         width: 100%;
         margin-bottom: 5px;
     }
+}
+
+/* Responsiviteti per pajisje */
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
 }
