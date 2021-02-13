@@ -31,10 +31,19 @@
                 <div class="col-md-4">
 
                     <h1>Contact us</h1>
+                    <?php session_start(); ?>
+                    <?php if (isset($_SESSION['success'])): ?>
+                        <div class="alert alert-primary" role="alert">
+                            Thank you for contacting us!
+                        </div>
+                    <?php endif; ?>
                     
                     
 
                     <form role="form" class="contact-form" action="vkontakt.php" method="post">
+                    <?php if (isset($_SESSION['error'])): ?>
+                            <div class="alert alert-warning"><?php echo $_SESSION['error']; ?></div>
+                        <?php endif; ?>
 
 
                         
