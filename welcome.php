@@ -33,6 +33,7 @@ if(strlen($_SESSION['uid'])=="")
                     <li><a href="sherbimet.html">SHERBIMET</a></li>
                     <li><a href="login.php">Login</a></li>
                     <li><a href="Register.php">Register</a></li>
+                    <li><a href="contactus.php">Contact us</a></li>
                 </ul>
             </nav>
         </div>
