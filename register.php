@@ -13,12 +13,12 @@ if(isset($_POST['submit']))
     if($sql)
     {
       echo "<script>alert('Jeni regjistruar ne databaze me sukses.');</script>";
-      echo "<script>window.location.href='signin.php'</script>";
+      echo "<script>window.location.href='login.php'</script>";
     }
     else
     {
       echo "<script>alert('Nuk jeni regjistruar. Provo prap me te dhenat korrekte!');</script>";
-      echo "<script>window.location.href='signin.php'</script>";
+      echo "<script>window.location.href='login.php'</script>";
     }
   }
 ?>
@@ -28,6 +28,19 @@ if(isset($_POST['submit']))
 <head>
 <title>DE Digital Marketing | Register</title>
     <link rel='stylesheet' href='style.css' type='text/css' />
+    <script src="assests/jquery-1.11.1.min.js"></script>
+    <script>
+    function checkusername(va) {
+      $.ajax({
+      type: "POST",
+      url: "check_availability.php",
+      data:'username='+va,
+      success: function(data){
+      $("#usernameavailblty").html(data);
+      }
+      });
+}
+</script>
 <header>
         <div class="container">
             <div id="branding">
@@ -45,20 +58,6 @@ if(isset($_POST['submit']))
             </nav>
         </div>
     </header>
-
- <script>
-function checkusername(va) {
-  $.ajax({
-  type: "POST",
-  url: "check_availability.php",
-  data:'username='+va,
-  success: function(data){
-  $("#usernameavailblty").html(data);
-  }
-  });
-
-}
-</script>
 </head>
 
 <div id="formulari">
