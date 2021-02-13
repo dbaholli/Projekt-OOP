@@ -1,6 +1,14 @@
 <?php
 session_start();
 include_once('function.php');
+$usercredentials=new DB_con();
+if(isset($_POST['signin']))
+{
+    $uname=$_POST['username'];
+    $pasword=md5($_POST['password']);
+    $ret=$usercredentials->signin($uname,$pasword);
+    $num=mysqli_fetch_array($ret);
+ 
 
 
 ?>
