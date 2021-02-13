@@ -9,7 +9,18 @@ if(isset($_POST['signin']))
     $ret=$usercredentials->signin($uname,$pasword);
     $num=mysqli_fetch_array($ret);
  
-
+    if($num>0)
+    {
+        $_SESSION['uid']=$num['id'];
+        $_SESSION['fname']=$num['FullName'];
+        echo "<script>window.location.href='welcome.php'</script>";
+    }
+else
+    {
+    echo "<script>alert('Invalid details. Please try again');</script>";
+    echo "<script>window.location.href='login.php'</script>";
+    }
+    }  
 
 ?>
 
