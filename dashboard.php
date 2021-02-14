@@ -1,7 +1,7 @@
 <?php
 include ('function.php');
 $con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME);
-$sql = "SELECT * FROM tblusers";
+$sql = "SELECT * FROM tblusers LIMIT 6;";
 $result = $con->query($sql);
 ?>
 
@@ -50,3 +50,28 @@ $result = $con->query($sql);
 <th>UserName</th>
 <th>UserEmail</th>
 </tr>
+<?php
+if ($result->num_rows > 0) {
+	while($row = $result->fetch_assoc()){
+		?>
+		<tr>
+		<td><?php echo $row['id']; ?> </td>
+		<td><?php echo $row['FullName']; ?> </td>
+		<td><?php echo $row['Username']; ?> </td>
+		<td><?php echo $row['UserEmail']; ?> </td>
+		</tr>
+		<?php
+	}
+}
+else
+{
+	?>
+	<tr>
+	<th colspan ="2">There is not data found here!</th>
+	</tr>
+	<?php
+}
+?>
+
+</body>
+</html>
