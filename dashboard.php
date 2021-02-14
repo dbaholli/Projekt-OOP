@@ -1,3 +1,12 @@
+<?php
+include ('function.php');
+$con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME);
+$sql = "SELECT * FROM tblusers";
+$result = $con->query($sql);
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
