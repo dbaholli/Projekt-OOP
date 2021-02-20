@@ -68,7 +68,7 @@ if(isset($_POST['submit']))
 <body>
     <center>
 <form class="form-horizontal" action='' method="POST">
-  <fieldset>
+  
     
 
 <div class="control-group">
@@ -115,7 +115,7 @@ if(isset($_POST['submit']))
       </div>
     </div>
 
-  </fieldset>
+  
 </form>
 
 </center>
