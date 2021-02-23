@@ -45,3 +45,31 @@ $result = $con->query($sql);
 <th>Subject</th>
 <th>Message</th>
 </tr>
+<?php
+if ($result->num_rows > 0) {
+	while($row = $result->fetch_assoc()){
+		?>
+		<tr>
+		<td><?php echo $row['id']; ?> </td>
+		<td><?php echo $row['name']; ?> </td>
+		<td><?php echo $row['email']; ?> </td>
+		<td><?php echo $row['subject']; ?> </td>
+		<td><?php echo $row['msg']; ?> </td>
+		</tr>
+		<?php
+	}
+}
+else
+{
+	?>
+	<tr>
+	<th colspan ="2">There is not data found here!</th>
+	</tr>
+	<?php
+}
+?>
+
+
+
+</body>
+</html>
