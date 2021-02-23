@@ -33,3 +33,15 @@ $result = $con->query($sql);
             </nav>
         </div>
     </header>
+
+    <h1 align="center">Mesazhet nga user-at.</h1>
+    <p align="center">Mesazhe</p>
+
+<table id="t01" border = "1" align = "center" style = "line-height:25px;">
+<tr>
+<th>UserID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Subject</th>
+<th>Message</th>
+</tr>
