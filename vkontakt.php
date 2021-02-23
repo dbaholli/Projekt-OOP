@@ -11,9 +11,10 @@ if (isset($_POST['name'])) {
         $error = "Enter your valid email address";
         $_SESSION['error'] = $error;
         header("Location: index.php");
-    } 
+     
     } else {
-        //connect databazen
+
+        //connect to the database
         $conn = mysqli_connect("localhost", "root", "", "userdb");
         $name = $_POST['name'];
         $email = $_POST['contact-email'];
