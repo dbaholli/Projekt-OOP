@@ -24,14 +24,12 @@ $result = $con->query($sql);
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li class="current"><a href="about.html">ABOUT</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="sherbimet.html">SHERBIMET</a></li>
+					<li><a href="index.html">HOME</a></li>
                     <li><a href="login.php">Login</a></li>
-                    <li><a href="index.php">Register</a></li>
-                    <li><a href="contactus.php">Contact us</a></li>
-
+                    <li><a href="register.php">Register</a></li>
+                    <li><a href="mesazhet.php">Mesazhet</a></li>
+					<li><a href="cart.php">Cart</a></li>
+					<li><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>
         </div>
