@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2021 at 03:25 PM
+-- Generation Time: Feb 23, 2021 at 07:51 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.13
 
@@ -59,15 +59,18 @@ CREATE TABLE `tblusers` (
   `Username` varchar(120) DEFAULT NULL,
   `UserEmail` varchar(200) DEFAULT NULL,
   `Password` varchar(250) DEFAULT NULL,
-  `RegDate` timestamp NULL DEFAULT current_timestamp()
+  `RegDate` timestamp NULL DEFAULT current_timestamp(),
+  `role` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblusers`
 --
 
-INSERT INTO `tblusers` (`id`, `FullName`, `Username`, `UserEmail`, `Password`, `RegDate`) VALUES
-(27, 'test user', 'testuser', 'test@gmail.com', 'cc03e747a6afbbcbf8be7668acfebee5', '2021-02-20 14:24:56');
+INSERT INTO `tblusers` (`id`, `FullName`, `Username`, `UserEmail`, `Password`, `RegDate`, `role`) VALUES
+(27, 'test user', 'testuser', 'test@gmail.com', 'cc03e747a6afbbcbf8be7668acfebee5', '2021-02-20 14:24:56', 0),
+(28, 'Edon', 'edon01', 'edon@gmail.com', '99d596b33f302b658ce91eb77cc39dc7', '2021-02-23 17:26:37', 0),
+(29, 'Diell', 'diellbaholli1', 'diell@hotmail.com', '72224cbe5c7ff18dcbf68612255d90e1', '2021-02-23 17:33:59', 0);
 
 -- --------------------------------------------------------
 
@@ -87,9 +90,9 @@ CREATE TABLE `tbl_product` (
 --
 
 INSERT INTO `tbl_product` (`id`, `name`, `image`, `price`) VALUES
-(1, 'Social Media Marketing', '1.jpg', 100.00),
-(2, 'Front-End Web Development', '2.jpg', 299.00),
-(3, 'Back-End Development', '3.jpg', 399.00);
+(1, 'Social Media Marketing', 'product1.png', 100.00),
+(2, 'Front-End Web Development', 'product2.png', 299.00),
+(3, 'Back-End Development', 'product1.png', 399.00);
 
 -- --------------------------------------------------------
 
@@ -154,7 +157,7 @@ ALTER TABLE `contact_us`
 -- AUTO_INCREMENT for table `tblusers`
 --
 ALTER TABLE `tblusers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `tbl_product`
