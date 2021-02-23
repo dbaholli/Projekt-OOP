@@ -3,6 +3,7 @@ include ('function.php');
 $con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME);
 $sql = "SELECT * FROM contact_us LIMIT 6;";
 $result = $con->query($sql);
+
 ?>
 
 
