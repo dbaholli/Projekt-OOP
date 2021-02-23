@@ -100,7 +100,14 @@ if(isset($_POST['submit']))
         <input type="password" id="password" name="password" placeholder="" class="input-xlarge" required="true">
       </div>
     </div>
- 
+    <br>
+    <div class="control-group">
+            <select name="role" class="control-control">
+                <option>Specifiko rolin</option>
+                <option value="standard_user">User i thjeshte</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div>
 
     <br>
     <div class="control-group">
