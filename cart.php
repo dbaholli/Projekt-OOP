@@ -72,10 +72,10 @@ if(isset($_GET["action"]))
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="blog.html">BLOG</a></li>
                     <li><a href="sherbimet.html">SHERBIMET</a></li>
-                    <li><a href="login.php">Login</a></li>
-                    <li><a href="Register.php">Register</a></li>
+					<li><a href="dashboard.php">MyUser</a></li>
                     <li class="current"><a href="cart.php">Cart</a></li>
                     <li><a href="contactus.php">Contact us</a></li>
+					<li><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>
         </div>
