@@ -29,6 +29,7 @@ $result = $con->query($sql);
                     <li><a href="register.php">Register</a></li>
                     <li><a href="mesazhet.php">Mesazhet</a></li>
 					<li><a href="cart.php">Cart</a></li>
+					<li><a href="adduser.php">Add User</a></li>
 					<li><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>
