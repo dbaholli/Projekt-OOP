@@ -42,24 +42,9 @@ if(isset($_POST['submit']))
       });
 }
 </script>
-<header>
-        <div class="container">
-            <div id="branding">
-                <h1><span class="highlight">DE</span>Digital Marketing</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="blog.html">Products</a></li>
-                    <li><a href="sherbimet.html">SHERBIMET</a></li>
-                    <li><a href="login.php">Login</a></li>
-                    <li class="current"><a href="register.php">Register</a></li>
-                    <li><a href="contactus.php">Contact us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<?php
+        include 'components/header.php'
+        ?>
 </head>
 
 <div id="formulari">
@@ -126,8 +111,8 @@ if(isset($_POST['submit']))
 </form>
 
 </center>
-<footer>
-        <p>DE Digital Marketing, Copyright &copy; 2020/2021</p>
-    </footer>
+<?php
+        include 'components/footer.php'
+        ?>
 </body>
 </html>
